@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tamagotchi</title>
+    <!-- Vincular estilos -->
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <!-- Fuente externa -->
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="contenedor-principal">
+        <!-- Barras de estado -->
+        <div class="barras-estado">
+            <div class="estado">
+                <label for="barra-hambre">Hambre</label>
+                <div class="contenedor-barra">
+                    <div id="barra-hambre" class="barra" style="width: 80%;"></div>
+                </div>
+            </div>
+            <div class="estado">
+                <label for="barra-felicidad">Felicidad</label>
+                <div class="contenedor-barra">
+                    <div id="barra-felicidad" class="barra" style="width: 50%;"></div>
+                </div>
+            </div>
+            <div class="estado">
+                <label for="barra-energia">Energía</label>
+                <div class="contenedor-barra">
+                    <div id="barra-energia" class="barra" style="width: 60%;"></div>
+                </div>
+            </div>
+            <div class="estado">
+                <label for="barra-salud">Salud</label>
+                <div class="contenedor-barra">
+                    <div id="barra-salud" class="barra" style="width: 60%;"></div>
+                </div>
+            </div>
+            <div class="estado">
+                <label for="barra-aburrimiento">Aburrimiento</label>
+                <div class="contenedor-barra">
+                    <div id="barra-aburrimiento" class="barra" style="width: 60%;"></div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Contenedor del huevo y el contenedor negro (donde irán las animaciones) -->
+        <div class="container">
+            <div class="contenedor-huevo">
+                <div class="huevo"></div> <!-- Huevo -->
+                <div class="contenedor-dragon">
+                    <div class="fondo-dragon"></div> <!-- Fondo negro sobre el huevo -->
+                    <!-- Video del Tamagotchi -->
+                    <video id="tamagotchi-video" width="320" height="240" autoplay loop muted>
+                        <source src="" type="video/mp4">
+                        Tu navegador no soporta la etiqueta de video.
+                    </video>
+                </div>
+            </div>
+            <div class="botones">
+                <button id="alimentar" onclick="tamagotchi.alimentar()">Alimentar</button>
+                <button id="jugar" onclick="tamagotchi.jugar()">Jugar</button>
+                <button id="dormir" onclick="tamagotchi.dormir()">Dormir</button>
+            </div>
+        </div>
+    </div>    
+
+    <!-- Vincular el script externo -->
+    <script src="tamagotchi3.js"></script>
+</body>
+</html>

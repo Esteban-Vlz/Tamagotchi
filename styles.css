@@ -1,0 +1,125 @@
+/* Estilo global del cuerpo */
+body {
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+    background-image: url('pared.png'); /* Imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    height: 100vh; /* Asegura ocupar toda la ventana */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra el contenido verticalmente */
+    align-items: center; /* Centra el contenido horizontalmente */
+}
+
+/* Contenedor principal */
+.contenedor-principal {
+    display: flex;
+    align-items: center; /* Centra verticalmente el contenido */
+    justify-content: center; /* Centra horizontalmente la página */
+    gap: 30px; /* Espacio entre las barras de estado y el huevo */
+    width: 100%; /* Asegura que ocupe todo el ancho */
+}
+
+/* Contenedor del huevo */
+.contenedor-huevo {
+    position: relative; /* Referencia para el centrado absoluto */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Huevo */
+.huevo {
+    background-image: url('huevo3.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 400px;
+    height: 500px;
+}
+
+/* Cuadrado negro sobre el huevo */
+.contenedor-dragon {
+    position: absolute;
+    top: 52%;  /* Centrado vertical */
+    left: 47%; /* Centrado horizontal */
+    right:62%;
+    width: 250px; /* Tamaño del cuadrado */
+    height: 250px;
+    background-color: black;
+    opacity: 0.7;
+    transform: translate(-50%, -50%); /* Centrado exacto */
+    border: 5px solid rgba(247, 225, 98, 0.836); /* Borde amarillo */
+    z-index: 2; /* Encima del huevo */
+}
+
+/* Botones */
+button {
+    background-color: #F1C40F; /* Color dorado */
+    color: #333; /* Texto oscuro */
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 14px;
+    cursor: pointer;
+    box-shadow: 0 4px #b89a28; /* Sombra */
+    transition: all 0.2s ease-in-out;
+}
+
+/* Hover en los botones */
+button:hover {
+    background-color: #D4AC0D; /* Cambio de color al pasar el mouse */
+    transform: scale(1.05); /* Efecto de zoom */
+    box-shadow: 0 6px #a68a23; /* Sombra más fuerte */
+}
+
+/* Contenedor de botones */
+.botones {
+    display: flex;
+    gap: 15px; /* Espacio entre botones */
+    margin-top: 10px;
+}
+
+/* Contenedor de las barras de estado */
+.barras-estado {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px; /* Espacio entre barras y huevo */
+    align-items: flex-start; /* Alinea las barras a la izquierda */
+    width: 300px; /* Ancho fijo */
+}
+
+/* Cada barra de estado */
+.estado {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 14px;
+    width: 100%;
+}
+
+.estado label {
+    color: #D4AC0D; /* Color del texto */
+}
+
+/* Contenedor de la barra */
+.contenedor-barra {
+    width: 100%; /* Ancho total */
+    height: 30px;
+    background-color: #ccc; /* Fondo gris */
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    margin-top: 5px; /* Espacio entre texto y barra */
+}
+
+/* Barra interna (progreso) */
+.barra {
+    height: 100%;
+    background-color: #c78176; /* Color de progreso */
+    transition: width 0.3s ease-in-out;
+}
